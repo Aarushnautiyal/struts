@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="hello" class="com.example.action.Hello">
+            <result>/hello.jsp</result>
+        </action>
+        <action name="feedbackForm">
+            <result>/feedback-form.jsp</result>
+        </action>
+
+        <action name="submitFeedback" class="com.example.action.FeedbackAction">
+            <result name="success">/thank-you.jsp</result>
+        </action>
+    </package>
+</struts>
